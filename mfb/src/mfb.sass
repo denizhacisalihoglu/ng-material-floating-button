@@ -363,12 +363,13 @@ $number-of-child-buttons: 4 !default
 /*------------------------------------*\
     #LABELS | Modifiers
 /*------------------------------------*\
-.mfb-component--br,
-.mfb-component--tr
-  [data-mfb-label]
-    &:after
-    content: attr(data-mfb-label)
-    right: $button-label-space
+@if $labels == true
+  .mfb-component--br,
+  .mfb-component--tr
+    [data-mfb-label]
+      &:after
+      content: attr(data-mfb-label)
+      right: $button-label-space
   
 .mfb-component--br
   .mfb-component__list,
